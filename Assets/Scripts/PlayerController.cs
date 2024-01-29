@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Rendering.HybridV2;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 
@@ -27,6 +28,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask groundLayers; // 地面
     [SerializeField] float groundCheckRadius = 0.1f; // 地面感知用の半径
 
+    // ステータス
+    [SerializeField] PlayerStatusSO playerStatus;
+    [SerializeField] Text hpText;
+    private int currentHP;
+
 	InputAction move;
 
 	// Start is called before the first frame update
@@ -36,6 +42,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 		col = GetComponent<CapsuleCollider>();
 		animator = GetComponent<Animator>();
+
+        currentHP = playerStatus.HP;
+        hpText.GetComponent<Text>().text = "HP : " + currentHP;
 
 		var playerInput = GetComponent<PlayerInput>();
 		move = playerInput.actions["Move"];

@@ -178,7 +178,7 @@
             "id": "6b6d8ba9-6042-4030-982f-8476547a9245",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Reset",
                     "type": "Button",
                     "id": "7904a680-8e98-49a1-b53b-71504153af65",
                     "expectedControlType": "Button",
@@ -191,11 +191,11 @@
                 {
                     "name": "",
                     "id": "3beb088d-b9fa-4f03-a1d3-9db65e02528e",
-                    "path": "",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Reset",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
